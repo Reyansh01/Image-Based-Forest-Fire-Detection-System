@@ -32,7 +32,6 @@ char *trim(char *str)
     return start;
 }
 
-
 int parse_line(char *line, char **key, char **value)
 {
     char *ptr = strchr(line, '=');
@@ -45,8 +44,6 @@ int parse_line(char *line, char **key, char **value)
 
     return 0;
 }
-
-
 
 int main()
 {
@@ -149,7 +146,7 @@ int main()
         size_t len = 0;
         size_t read;
         char *key, *value;
-        
+
         printf("\nEnter the State or Union Territory: ");
         fp = fopen("contact_data.txt", "r");
         if (fp == NULL)
@@ -180,9 +177,8 @@ int main()
         printf("NO FIRE DETECTED.\n");
     }
 
-
     // Creating a new image of our desired color model.
-    // stbi_write_jpg("fire(3)_ycbcr.jpg", width, height, channels, color_img, 100);
+    stbi_write_jpg("fire(3)_ycbcr.jpg", width, height, channels, color_img, 100);
 
     // free used space (GOOD PRACTICE).
     stbi_image_free(img);
