@@ -105,7 +105,6 @@ int main()
     double percentRGBinitial = 0, percentRGB = 0;
     percentRGBinitial = finalcount_rgb * 100;
     percentRGB = percentRGBinitial / pixels;
-    printf("Final count for RGB model is : %d\n", finalcount_rgb);
 
     //Comparision with Threshold Value
     if (percentRGB > 1.5)
@@ -114,14 +113,12 @@ int main()
     }
 
     // YCbCr threshold check:
-    printf("Final count for YCbCr model is : %d\n", finalcount_ycbcr);
     if (finalcount_ycbcr >= 0)
     {
         bagcount_ycbcr = 1;
     }
 
     // CIE LAB threshold check:
-    printf("Final count for CIE LAB model is : %d\n", finalcount_cie);
     double percentinitial, percentcie;
     percentinitial = finalcount_cie * 100;
     percentcie = percentinitial / pixels;
@@ -136,12 +133,12 @@ int main()
     bagcount = bagcount_rgb + bagcount_ycbcr + bagcount_cie;
     if (bagcount >= 2)
     {
-        printf("FINALLY FIRE DETECTED.\n");
+        printf("FINALLY FIRE DETECTED.\n\n");
         
         printf("Model Name\t\t|Fincount\t\t|Yes/No|\n");
-        printf("RGB \t\t|%d\t\t%d|\n", finalcount_rgb,bagcount_rgb);
-        printf("YCbCr \t\t|%d\t\t%d|\n", finalcount_ycbcr,bagcount_ycbcr);
-        printf("CIE LAB \t\t|%d\t\t%d|\n", finalcount_cie,bagcount_cie);
+        printf("RGB       \t\t|   %d   \t\t|  %d  |\n", finalcount_rgb,bagcount_rgb);
+        printf("YCbCr     \t\t|   %d   \t\t|  %d  |\n", finalcount_ycbcr,bagcount_ycbcr);
+        printf("CIE LAB   \t\t|   %d   \t\t|  %d  |\n", finalcount_cie,bagcount_cie);
 
         FILE *fp;
         char *line = NULL;
