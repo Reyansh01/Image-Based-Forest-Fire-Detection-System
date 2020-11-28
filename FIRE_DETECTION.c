@@ -168,7 +168,7 @@ int main()
 
             if (strcmp(state, key) == 0)
             {
-                printf("\nPlease inform the Directorate General, Fire Services of %s in order to subjugate the threat.\nCONTACT NUMBER : %s\n", state, value);
+                printf("\nPlease inform the Directorate General, Fire Services of %s in order to subjugate the threat.\n THE CONTACT NUMBER IS : %s\n", state, value);
                 break;
             }
         }
