@@ -133,12 +133,16 @@ int main()
     bagcount = bagcount_rgb + bagcount_ycbcr + bagcount_cie;
     if (bagcount >= 2)
     {
-        printf("FINALLY FIRE DETECTED.\n\n");
-        
-        printf("Model Name\t\t|Fincount\t\t|Yes/No|\n");
-        printf("RGB       \t\t|   %d   \t\t|  %d  |\n", finalcount_rgb,bagcount_rgb);
-        printf("YCbCr     \t\t|   %d   \t\t|  %d  |\n", finalcount_ycbcr,bagcount_ycbcr);
-        printf("CIE LAB   \t\t|   %d   \t\t|  %d  |\n", finalcount_cie,bagcount_cie);
+        printf("-----------------------------");
+        printf("\nFINALLY FIRE DETECTED.\n");
+        printf("-----------------------------\n\n");
+        printf("---------------------------------------------------------\n");
+        printf("|Model Name\t|\tFincount\t|\tYes/No\t|\n");
+        printf("---------------------------------------------------------\n");
+        printf("|RGB       \t|\t   %d   \t|\t  %d   \t|\n", finalcount_rgb,bagcount_rgb);
+        printf("|YCbCr     \t|\t   %d   \t|\t  %d   \t|\n", finalcount_ycbcr,bagcount_ycbcr);
+        printf("|CIE LAB   \t|\t   %d   \t|\t  %d   \t|\n", finalcount_cie,bagcount_cie);
+        printf("---------------------------------------------------------\n");
 
         FILE *fp;
         char *line = NULL;
