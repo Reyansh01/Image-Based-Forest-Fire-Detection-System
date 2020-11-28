@@ -131,15 +131,17 @@ int main()
         bagcount_cie = 1;
     }
 
-    printf("RGB : %d\n", bagcount_rgb);
-    printf("YCbCr : %d\n", bagcount_ycbcr);
-    printf("CIE LAB : %d\n", bagcount_cie);
 
     //FINAL VALIDATION:
     bagcount = bagcount_rgb + bagcount_ycbcr + bagcount_cie;
     if (bagcount >= 2)
     {
         printf("FINALLY FIRE DETECTED.\n");
+        
+        printf("Model Name\t\t|Fincount\t\t|Yes/No|\n");
+        printf("RGB \t\t|%d\t\t%d|\n", finalcount_rgb,bagcount_rgb);
+        printf("YCbCr \t\t|%d\t\t%d|\n", finalcount_ycbcr,bagcount_ycbcr);
+        printf("CIE LAB \t\t|%d\t\t%d|\n", finalcount_cie,bagcount_cie);
 
         FILE *fp;
         char *line = NULL;
