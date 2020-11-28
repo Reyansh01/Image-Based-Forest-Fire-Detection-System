@@ -178,7 +178,7 @@ int main()
     }
 
     // Creating a new image of our desired color model.
-    stbi_write_jpg("fire(3)_ycbcr.jpg", width, height, channels, color_img, 100);
+    // stbi_write_jpg("fire(3)_ycbcr.jpg", width, height, channels, color_img, 100);
 
     // free used space (GOOD PRACTICE).
     stbi_image_free(img);
