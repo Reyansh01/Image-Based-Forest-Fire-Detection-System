@@ -113,7 +113,7 @@ int main()
     }
 
     // YCbCr threshold check:
-    if (finalcount_ycbcr >= 0)
+    if (finalcount_ycbcr > 0)
     {
         bagcount_ycbcr = 1;
     }
@@ -177,7 +177,7 @@ int main()
     }
     else
     {
-        printf("-----------------------------");
+        printf("-----------------------------\n");
         printf("NO FIRE DETECTED.\n");
         printf("-----------------------------\n\n");
     }
